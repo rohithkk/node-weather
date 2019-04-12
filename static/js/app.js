@@ -9,7 +9,7 @@ function getWeatherData(){
     const locationElement = document.querySelector('#location');
 
     let address = document.getElementById('address').value;
-    fetch(`http://localhost:3000/weather?address=${address}`).then((response)=> {
+    fetch(`/weather?address=${address}`).then((response)=> {
 
         if(response.status == 200){
             response.json().then((data) =>{
